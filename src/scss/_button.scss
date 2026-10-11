@@ -1,0 +1,54 @@
+// Botones
+@mixin button-base($border, $background, $color, $hover-background, $hover-color, $hover-border) {
+    
+    border: $border;
+    background-color: $background;
+    color: $color;
+    padding: 10px 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+    min-width: 130px;
+    font-size: 16px;
+
+    & > * {
+        color: $color;
+        display: block;
+    }
+    &:hover{
+        background-color: $hover-background;
+        color: $hover-color;
+        cursor: pointer;
+        border: $hover-border;
+    }
+
+    .button-icon{
+        margin-right: 10px;        
+        height: 22px;
+    }
+}
+
+@mixin button-link {
+    text-decoration: none;
+    display: flex; 
+    align-items: center;
+    width: fit-content;
+}
+
+.btn-ghost{
+    @include button-base(1px solid $green, transparent, $green, $green, $white, 1px solid $green);
+}
+
+.btn-white{
+    @include button-base(none, $white, $green, $green, $white, none);
+    @include button-link;
+}
+
+.btn-green{
+    @include button-base(none, $green, $white, $dark-green, $white, none);
+    @include button-link;
+}
+
+.btn-white-ghost{
+    @include button-base(2px solid $white, transparent, $white, transparent, $white, none );
+    @include button-link;
+}

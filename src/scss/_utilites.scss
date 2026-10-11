@@ -1,0 +1,107 @@
+/*  Utilities Styles  */
+
+$alignOptions : "start", "center", "end";
+
+.d-flex{
+    display: flex;
+}
+
+@each $align in $alignOptions {
+    .align-content-#{$align} {
+        align-content: #{$align};
+    }
+}
+
+.badge-green{
+    background-color: $green;
+    color: $white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 0.8em;
+    text-transform: lowercase;
+}
+
+
+// Heights
+@for $i from 1 through 10 {
+    .h-#{$i}0vh {
+        height: #{$i * 10}vh;
+    }
+}
+ 
+
+// Posicionamiento
+.position-relative{
+    position: relative;
+}
+
+@for $i from 1 through 10 {
+
+    .position-top-#{$i} {
+        top: #{$i * 20}px;
+    }
+
+    .position-negative-top-#{$i} {
+        top: -#{$i * 20}px;
+    }
+
+    .position-bottom-#{$i} {
+        bottom: #{$i * 20}px;
+    }
+
+    .position-negative-bottom-#{$i} {
+        bottom: -#{$i * 20}px;
+    }
+
+    .position-left-#{$i} {
+        left: #{$i * 20}px;
+    }
+
+    .position-negative-left-#{$i} {
+        left: -#{$i * 20}px;
+    }
+
+    .position-right-#{$i} {
+        right: #{$i * 20}px;
+    }
+
+    .position-negative-right-#{$i} {
+        right: -#{$i * 20}px;
+    }
+}
+
+// Background 
+
+.bg-green{
+    background-color: $green;
+}
+
+.bg-dark-green{
+    background-color: $dark-green;
+}
+
+.bg-gray{
+    background-color: $gray;
+}
+
+.bg-white{
+    background-color: $white;
+}
+
+.bg-white-dotted{
+
+    $size: 0.15rem;
+    $position: 0.65rem;
+    $bg_size: 1.3rem;
+
+    //background-color: #F0F0F0;
+    background-image: radial-gradient(
+      circle at center,
+      $gray $size,
+      transparent 0
+    ), radial-gradient(circle at center, $gray $size, transparent 0);
+
+    background-size: $bg_size $bg_size;
+    background-position: 0 0, $position $position;
+}

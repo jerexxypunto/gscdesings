@@ -1,0 +1,55 @@
+$quicksand: "Quicksand", sans-serif;
+$open-sans: "Open Sans", sans-serif;
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        font-family: $quicksand;
+    }
+}
+
+@for $i from 1 through 4 {
+    .font-display-#{$i} {
+        font-weight: 300;
+        font-size: #{ $i * 1.5 }rem;
+        line-height: 1.2;
+    }
+}
+
+.font-quicksand{
+    font-family: $quicksand;
+}
+
+.font-open-sans{
+    font-family: $open-sans;
+}
+
+.bold{
+    font-weight: 700;
+}
+
+.light{
+    font-weight: 300;
+}
+
+.text-white{
+    color: #fff;
+}
+
+.text-dark{
+    color: #000;
+}
+
+.text-green{
+    color: $green;
+}
+
+.text-dark-green{
+    color: $dark-green;
+}
+
+$textAlignOptions : "left", "center", "right";
+@each $align in $textAlignOptions {
+    .text-align-#{$align} {
+        text-align: #{$align};
+    }
+}

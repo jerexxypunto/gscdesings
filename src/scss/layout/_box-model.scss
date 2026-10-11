@@ -1,0 +1,37 @@
+// Margenes
+@for $i from 1 through 6 {
+
+    .mt-#{$i} {
+        margin-top: #{$i * 20}px;
+    }
+    .mb-#{$i} {
+        margin-bottom: #{$i * 20}px;
+    }
+    .my-#{$i} {
+        margin-top: #{$i * 20}px;
+        margin-bottom: #{$i * 20}px;
+    }
+    .ml-#{$i} {
+        margin-left: #{$i * 20}px;
+    }
+
+    .mr-#{$i} {
+        margin-right: #{$i * 20}px;
+    }
+}
+
+// Padding
+@for $i from 1 through 6 {
+    .pt-#{$i} {
+        padding-top: #{$i * 20}px;
+    }
+    .pb-#{$i} {
+        padding-bottom: #{$i * 20}px;
+    }
+    .pl-#{$i} {
+        padding-left: #{$i * 20}px;
+    }
+    .pr-#{$i} {
+        padding-right: #{$i * 20}px;
+    }
+}  
