@@ -1,7 +1,8 @@
 // Botones
-@mixin button-base($border, $background, $color, $hover-background, $hover-color, $hover-border) {
+@mixin button-base($border-shadow, $background, $color, $hover-background, $hover-color, $hover-border-shadow) {
     
-    border: $border;
+    border: none;
+    box-shadow: $border-shadow;
     background-color: $background;
     color: $color;
     padding: 10px 20px;
@@ -18,7 +19,7 @@
         background-color: $hover-background;
         color: $hover-color;
         cursor: pointer;
-        border: $hover-border;
+        box-shadow: $hover-border-shadow;
     }
 
     .button-icon{
@@ -35,7 +36,7 @@
 }
 
 .btn-ghost{
-    @include button-base(1px solid $green, transparent, $green, $green, $white, 1px solid $green);
+    @include button-base(inset 0 0 0 1px $green, transparent, $green, $green, $white, inset 0 0 0 1px $green);
 }
 
 .btn-white{
@@ -49,6 +50,6 @@
 }
 
 .btn-white-ghost{
-    @include button-base(2px solid $white, transparent, $white, transparent, $white, none );
+    @include button-base(inset 0 0 0 2px $white, transparent, $white, transparent, $white, none );
     @include button-link;
 }

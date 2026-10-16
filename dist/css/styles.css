@@ -1,19 +1,69 @@
-/* Normalization */
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-  color: #444444;
-}
-
 .container-grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 20px;
+}
+
+.col-1 {
+  -ms-grid-column-span: 1;
+  grid-column: span 1;
+}
+
+.col-2 {
+  -ms-grid-column-span: 2;
+  grid-column: span 2;
+}
+
+.col-3 {
+  -ms-grid-column-span: 3;
+  grid-column: span 3;
+}
+
+.col-4 {
+  -ms-grid-column-span: 4;
+  grid-column: span 4;
+}
+
+.col-5 {
+  -ms-grid-column-span: 5;
+  grid-column: span 5;
+}
+
+.col-6 {
+  -ms-grid-column-span: 6;
+  grid-column: span 6;
+}
+
+.col-7 {
+  -ms-grid-column-span: 7;
+  grid-column: span 7;
+}
+
+.col-8 {
+  -ms-grid-column-span: 8;
+  grid-column: span 8;
+}
+
+.col-9 {
+  -ms-grid-column-span: 9;
+  grid-column: span 9;
+}
+
+.col-10 {
+  -ms-grid-column-span: 10;
+  grid-column: span 10;
+}
+
+.col-11 {
+  -ms-grid-column-span: 11;
+  grid-column: span 11;
+}
+
+.col-12 {
+  -ms-grid-column-span: 12;
+  grid-column: span 12;
 }
 
 @media (max-width: 400px) {
@@ -166,68 +216,10 @@
     grid-column: span 12;
   }
 }
-.col-1 {
-  -ms-grid-column-span: 1;
-  grid-column: span 1;
-}
-
-.col-2 {
-  -ms-grid-column-span: 2;
-  grid-column: span 2;
-}
-
-.col-3 {
-  -ms-grid-column-span: 3;
-  grid-column: span 3;
-}
-
-.col-4 {
-  -ms-grid-column-span: 4;
-  grid-column: span 4;
-}
-
-.col-5 {
-  -ms-grid-column-span: 5;
-  grid-column: span 5;
-}
-
-.col-6 {
-  -ms-grid-column-span: 6;
-  grid-column: span 6;
-}
-
-.col-7 {
-  -ms-grid-column-span: 7;
-  grid-column: span 7;
-}
-
-.col-8 {
-  -ms-grid-column-span: 8;
-  grid-column: span 8;
-}
-
-.col-9 {
-  -ms-grid-column-span: 9;
-  grid-column: span 9;
-}
-
-.col-10 {
-  -ms-grid-column-span: 10;
-  grid-column: span 10;
-}
-
-.col-11 {
-  -ms-grid-column-span: 11;
-  grid-column: span 11;
-}
-
-.col-12 {
-  -ms-grid-column-span: 12;
-  grid-column: span 12;
-}
-
 .btn-ghost {
-  border: 1px solid #99CC02;
+  border: none;
+  -webkit-box-shadow: inset 0 0 0 1px #99CC02;
+          box-shadow: inset 0 0 0 1px #99CC02;
   background-color: transparent;
   color: #99CC02;
   padding: 10px 20px;
@@ -245,7 +237,8 @@
   background-color: #99CC02;
   color: #FFFFFF;
   cursor: pointer;
-  border: 1px solid #99CC02;
+  -webkit-box-shadow: inset 0 0 0 1px #99CC02;
+          box-shadow: inset 0 0 0 1px #99CC02;
 }
 .btn-ghost .button-icon {
   margin-right: 10px;
@@ -254,6 +247,8 @@
 
 .btn-white {
   border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background-color: #FFFFFF;
   color: #99CC02;
   padding: 10px 20px;
@@ -281,7 +276,8 @@
   background-color: #99CC02;
   color: #FFFFFF;
   cursor: pointer;
-  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .btn-white .button-icon {
   margin-right: 10px;
@@ -290,6 +286,8 @@
 
 .btn-green {
   border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background-color: #99CC02;
   color: #FFFFFF;
   padding: 10px 20px;
@@ -317,7 +315,8 @@
   background-color: #8CBE5E;
   color: #FFFFFF;
   cursor: pointer;
-  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .btn-green .button-icon {
   margin-right: 10px;
@@ -325,7 +324,9 @@
 }
 
 .btn-white-ghost {
-  border: 2px solid #FFFFFF;
+  border: none;
+  -webkit-box-shadow: inset 0 0 0 2px #FFFFFF;
+          box-shadow: inset 0 0 0 2px #FFFFFF;
   background-color: transparent;
   color: #FFFFFF;
   padding: 10px 20px;
@@ -353,7 +354,8 @@
   background-color: transparent;
   color: #FFFFFF;
   cursor: pointer;
-  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .btn-white-ghost .button-icon {
   margin-right: 10px;
@@ -607,11 +609,34 @@
 .badge-green {
   background-color: #99CC02;
   color: #FFFFFF;
-  padding: 10px 20px;
+  padding: 5px 20px 10px 20px;
   border-radius: 50px;
   font-weight: bold;
   font-size: 0.8em;
   text-transform: lowercase;
+}
+
+.marked-white {
+  position: relative;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.marked-white::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.5em;
+  background-color: #FFFFFF;
+  display: block;
+  z-index: 1;
+}
+.marked-white .text {
+  position: relative;
+  z-index: 10;
 }
 
 .h-10vh {
@@ -1000,6 +1025,17 @@
   background-position: 0 0, 0.65rem 0.65rem;
 }
 
+/* Normalization */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Open Sans", sans-serif, sans-serif;
+  color: #444444;
+  scroll-behavior: smooth;
+}
+
 h1 {
   font-family: "Quicksand", sans-serif;
 }
@@ -1058,6 +1094,10 @@ h6 {
 
 .bold {
   font-weight: 700;
+}
+
+.semibold {
+  font-weight: 600;
 }
 
 .light {
@@ -1121,17 +1161,26 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   list-style: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+  gap: 20px;
 }
 .nav-container a {
   text-decoration: none;
   color: #000;
+  font-family: "Quicksand", sans-serif;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+.nav-container a:hover {
+  color: #99CC02;
+  font-weight: bold;
 }
 
 /*  Main Styles  */
@@ -1239,6 +1288,9 @@ picture .img-fluid {
   background-color: #89C503;
   padding: 50px 0;
 }
+.banner-soy-yo__info {
+  font-family: "Quicksand", sans-serif;
+}
 .banner-soy-yo__info h3 {
   font-size: 47px;
   font-weight: 400;
@@ -1246,6 +1298,7 @@ picture .img-fluid {
 .banner-soy-yo__info h3 b {
   font-weight: bold;
   color: #B4DEBB;
+  font-family: "Quicksand", sans-serif;
 }
 .banner-soy-yo__info h4 {
   font-size: 24px;

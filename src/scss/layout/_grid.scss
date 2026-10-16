@@ -4,6 +4,13 @@
     grid-gap: 20px;
 }
 
+@for $i from 1 through 12{
+    .col-#{$i}{
+        grid-column: span $i;
+    }
+}
+
+
 // Small devices (400px)
 @media (max-width: 400px){
     @for $i from 1 through 12{
@@ -28,12 +35,5 @@
         .col-lg-#{$i}{
             grid-column: span $i;
         }
-    }
-}
-
-
-@for $i from 1 through 12{
-    .col-#{$i}{
-        grid-column: span $i;
     }
 }
