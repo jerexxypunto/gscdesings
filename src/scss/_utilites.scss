@@ -20,6 +20,13 @@ $alignOptions : "start", "center", "end";
     font-weight: bold;
     font-size: 0.8em;
     text-transform: lowercase;
+
+    @media (max-width: $breakpoint-sm){
+        font-size: 25px;
+        img{
+            width: 25px;
+        }
+    }
 }
 
 .marked-white{
@@ -27,6 +34,10 @@ $alignOptions : "start", "center", "end";
     position: relative;
     display: block;
     width: fit-content;
+
+    @media (max-width: $breakpoint-md){
+        margin: 0 auto;
+    }
 
     &::before{
         content: "";

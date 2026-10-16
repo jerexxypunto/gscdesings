@@ -615,6 +615,14 @@
   font-size: 0.8em;
   text-transform: lowercase;
 }
+@media (max-width: 400px) {
+  .badge-green {
+    font-size: 25px;
+  }
+  .badge-green img {
+    width: 25px;
+  }
+}
 
 .marked-white {
   position: relative;
@@ -622,6 +630,11 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+@media (max-width: 700px) {
+  .marked-white {
+    margin: 0 auto;
+  }
 }
 .marked-white::before {
   content: "";
@@ -1036,6 +1049,12 @@
   scroll-behavior: smooth;
 }
 
+@media (max-width: 700px) {
+  p {
+    font-size: 20px;
+  }
+}
+
 h1 {
   font-family: "Quicksand", sans-serif;
 }
@@ -1066,18 +1085,33 @@ h6 {
   line-height: 1.2;
 }
 
+@media (max-width: 700px) {
+  .font-display-1 {
+    font-size: 30px;
+  }
+}
 .font-display-2 {
   font-weight: 300;
   font-size: 3rem;
   line-height: 1.2;
 }
 
+@media (max-width: 700px) {
+  .font-display-2 {
+    font-size: 30px;
+  }
+}
 .font-display-3 {
   font-weight: 300;
   font-size: 4.5rem;
   line-height: 1.2;
 }
 
+@media (max-width: 700px) {
+  .font-display-3 {
+    font-size: 30px;
+  }
+}
 .font-display-4 {
   font-weight: 300;
   font-size: 6rem;
@@ -1205,6 +1239,12 @@ h6 {
   background-size: contain;
   background-repeat: no-repeat;
 }
+@media (max-width: 700px) {
+  .bg-green-wave::before {
+    background-image: url("../assets/wave-mobile.png");
+    top: -100px;
+  }
+}
 .bg-green-wave::after {
   content: "";
   display: block;
@@ -1217,6 +1257,11 @@ h6 {
   background-size: contain;
   background-repeat: no-repeat;
 }
+@media (max-width: 700px) {
+  .bg-green-wave::after {
+    display: none;
+  }
+}
 .bg-green-wave .container {
   position: relative;
   z-index: 1;
@@ -1227,11 +1272,55 @@ picture .img-fluid {
   height: auto;
 }
 
+@media (max-width: 700px) {
+  #home {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 700px) {
+  #quien-soy {
+    padding: 100px 0;
+    background-color: #99CC02;
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+}
+#quien-soy .container picture {
+  position: relative;
+  top: 0;
+  padding-bottom: 100px;
+  margin-bottom: 100px;
+}
+@media (max-width: 700px) {
+  #quien-soy .container picture {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 700px) {
+  #quien-soy .section-container picture {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  #quien-soy .section-container div {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+}
+
 .class-card {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 225px;
   margin-bottom: 50px;
+}
+@media (max-width: 700px) {
+  .class-card {
+    margin-bottom: 0;
+  }
 }
 .class-card .front {
   position: relative;
@@ -1251,6 +1340,25 @@ picture .img-fluid {
           justify-content: end;
   gap: 10px;
 }
+@media (max-width: 700px) {
+  .class-card .front {
+    padding: 20px;
+  }
+  .class-card .front .btn {
+    padding: 5px 10px;
+    min-width: auto;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .class-card .front .btn p {
+    font-size: 12px;
+  }
+  .class-card .front .btn img {
+    width: 12px;
+    height: 12px;
+  }
+}
 .class-card .background {
   position: absolute;
   top: 0;
@@ -1261,7 +1369,7 @@ picture .img-fluid {
 }
 .class-card .img-card {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .banner-info {
@@ -1275,9 +1383,25 @@ picture .img-fluid {
           align-items: center;
   gap: 20px;
 }
+@media (max-width: 700px) {
+  .banner-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+  }
+}
 .banner-info h3 {
   font-size: 47px;
   font-weight: 400;
+}
+@media (max-width: 700px) {
+  .banner-info h3 {
+    font-size: 30px;
+    text-align: center;
+  }
 }
 .banner-info h3 b {
   font-weight: bold;
@@ -1294,6 +1418,13 @@ picture .img-fluid {
 .banner-soy-yo__info h3 {
   font-size: 47px;
   font-weight: 400;
+  text-align: left;
+}
+@media (max-width: 700px) {
+  .banner-soy-yo__info h3 {
+    font-size: 30px;
+    text-align: center;
+  }
 }
 .banner-soy-yo__info h3 b {
   font-weight: bold;
@@ -1320,4 +1451,9 @@ picture .img-fluid {
 }
 .footer-container p {
   color: #fff;
+}
+@media (max-width: 700px) {
+  .footer-container p {
+    font-size: 14px;
+  }
 }

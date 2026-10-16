@@ -11,6 +11,12 @@ $open-sans: "Open Sans", sans-serif;
     scroll-behavior: smooth;
 }
 
+p{
+    @media (max-width: $breakpoint-md){
+        font-size: 20px;
+    }
+}
+
 @for $i from 1 through 6 {
     h#{$i} {
         font-family: $quicksand;
@@ -22,6 +28,14 @@ $open-sans: "Open Sans", sans-serif;
         font-weight: 300;
         font-size: #{ $i * 1.5 }rem;
         line-height: 1.2;
+    }
+
+    @media (max-width: $breakpoint-md){
+        @if $i <= 3{
+            .font-display-#{$i} {
+                font-size: 30px;
+            }
+        }
     }
 }
 
