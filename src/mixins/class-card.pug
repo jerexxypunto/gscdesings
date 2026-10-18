@@ -1,4 +1,8 @@
 mixin classCard(card)
+    - let wsp_message = "Hola, me interesa tu servicio de desarrollo web. ¿Podrías darme más información?"
+    - if (!card.quoteUrl) {
+        - card.quoteUrl = `https://wa.me/56990055107?text=${encodeURIComponent(wsp_message)}`   
+        
     .class-card.col-6.col-md-12
         .front
             a.btn-green.btn(href=card.quoteUrl)

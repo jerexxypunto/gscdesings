@@ -4,6 +4,10 @@
     grid-gap: 20px;
 }
 
+.grid-row-gallery{
+    grid-template-rows: repeat(2, 1fr);
+}
+
 @for $i from 1 through 12{
     .col-#{$i}{
         grid-column: span $i;

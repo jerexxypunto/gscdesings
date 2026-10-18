@@ -149,15 +149,15 @@ picture .img-fluid{
 
 .class-card{
 
-    $heigth-card: 400px;
+    --heigth-card: 400px;
 
     @media (max-width: $breakpoint-md){
-        $heigth-card: 225px;
+        --heigth-card: 225px;
     }
 
     position: relative;
     width: 100%;
-    height: $heigth-card;
+    height: var(--heigth-card);
     margin-bottom: 50px;
 
     @media (max-width: $breakpoint-md){

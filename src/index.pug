@@ -1,9 +1,6 @@
 extends layout/page.pug
 
 include mixins/class-card.pug
-
--wsp_message = "Hola, me interesa tu servicio de desarrollo web. ¿Podrías darme más información?"
-
 block content
     .bg-white#home
         .container
@@ -33,18 +30,18 @@ block content
     .bg-white#cursos
         .container
             h2.font-display-2.text-align-center Clases de Wordpress <span class="badge-green" > <img src="./assets/live-badge.png" alt="En Vivo">  En Vivo </span>
-            .container-grid.mt-3 
+            .container-grid.mt-3.grid-row-gallery 
                 +classCard({
                     backgroundImage: "./assets/clases-card-dev.png",
                     backgroundAlt: "Clase para desarrolladores",
-                    quoteUrl: ${wsp_message},
+                    quoteUrl: false,
                     detailsUrl: "#",
                 })
 
                 +classCard({               
                     backgroundImage: "./assets/clases-card-contenido.png",
                     backgroundAlt: "Creadores de contenido",
-                    quoteUrl: ${wsp_message},
+                    quoteUrl: false,
                     detailsUrl: "#"
                 })
 
