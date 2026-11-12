@@ -140,3 +140,8 @@ $alignOptions : "start", "center", "end";
     background-size: $bg_size $bg_size;
     background-position: 0 0, $position $position;
 }
+
+.button-row{
+    display: flex;
+    gap: 15px;
+}

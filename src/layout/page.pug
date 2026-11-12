@@ -16,7 +16,11 @@ html(lang="en")
             .logo
                 img(src="./assets/logo.png", alt="GSC Diseños")
             nav.nav-container
-                ul
+                button.menu-toggle(type="button" aria-label="Toggle navigation" data-actived="false" )
+                    span
+                    span
+                    span
+                ul.canvas-diabled.menu-list
                     li: a(href="#home") Inicio
                     li: a(href="#quien-soy") Sobre Mí
                     li: a(href="#cursos") Cursos
@@ -28,3 +32,4 @@ html(lang="en")
 
         footer.footer.footer-container
             p © 2024 GSC Diseños. Todos los derechos reservados.
+        script(src="./js/menu.js") 

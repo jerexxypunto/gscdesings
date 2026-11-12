@@ -1,66 +1,15 @@
 extends layout/page.pug
-
-include mixins/class-card.pug
 block content
-    .bg-white#home
-        .container
-            section.section-container.container-grid.h-60vh.mb-4
-                div.col-6.col-sm-12.align-content-center
-                    h2.font-display-2 Desarrollo de 
-                        span.semibold.font-quicksand Sitios Web
-                    p.mt-1 Transforma tu presencia en línea con diseños web cautivadores y funcionales. Destaca entre la multitud con una página web que refleje la esencia única de tu marca.
-                picture.col-6.col-sm-12.align-content-center
-                    img(src="./assets/dev-home.png", alt="Banner" class="img-fluid img-banner")
-    .bg-green-wave#quien-soy
-        .container
-            section.section-container.container-grid
-                picture.col-6.col-sm-12.align-content-center
-                    img(src="./assets/home.png", alt="App" class="img-fluid img-app")
-                div.col-6.col-sm-12.align-content-center
-                    h2.font-display-3 Hola!!
-                    h3.font-display-2 Soy 
-                        span.semibold.font-quicksand.marked-white 
-                            span.text Jeremías San Martín
-                    p.mt-1 Desde mi adolecencia, me he sumergido en el apasionante mundo del desarrollo de software. Me especializo en el desarrollo y diseño de sitios web, así como en la creación de aplicaciones web. Disfruto combinando creatividad y tecnología para crear experiencias en línea sorprendentes. Con una profunda pasión por mi trabajo, estoy siempre listo para colaborar, siendo responsable y comprometido con cada proyecto que emprendo.
-                    h4.mt-2.font-display-1 ¡Es un placer conocerte y espero poder ayudarte a llevar tus ideas al siguiente nivel!
-                    <a class="btn-white mt-1" href="https://wa.me/56990055107?text=${wsp_message}" target="_blank">
-                        <img src="./assets/green-icon-wp.png" alt="WhatsApp" class="img-fluid button-icon"/> Conversemos
-                    </a>
+    .container#home 
+        .row 
 
-    .bg-white#cursos
-        .container
-            h2.font-display-2.text-align-center Clases de Wordpress <span class="badge-green" > <img src="./assets/live-badge.png" alt="En Vivo">  En Vivo </span>
-            .container-grid.mt-3.grid-row-gallery 
-                +classCard({
-                    backgroundImage: "./assets/clases-card-dev.png",
-                    backgroundAlt: "Clase para desarrolladores",
-                    quoteUrl: false,
-                    detailsUrl: "#",
-                })
+            .col-md-8.col-sm-12.titles-wrapper 
+                .titles 
+                    h2 Páginas web que hablan por ti
+                    p En GSC Diseños creamos sitios web con WordPress que cargan rápido y se ven bien en cualquier pantalla. Jeremías San Martín lleva más de seis años construyendo páginas para negocios que necesitan vender más y complicarse menos.
+                    .button-row
+                        button.btn.btn-green Contáctanos 
+                        button.btn.btn-ghost Servicios
 
-                +classCard({               
-                    backgroundImage: "./assets/clases-card-contenido.png",
-                    backgroundAlt: "Creadores de contenido",
-                    quoteUrl: false,
-                    detailsUrl: "#"
-                })
-
-                .banner-info.col-12.bg-dark-green.mb-2
-                    img(src="./assets/Bombillo-Green.png", alt="Badge" class="img-fluid")
-                    div
-                        <h3 class="text-align-right" >SI CONVECES A ALGUN AMIGO DE <b>TOMAR</b> LA CLASE <b>CONTIGO</b> </h3>
-                        <h3 class="text-align-right" >OBTEN TU CLASE A <b>$10.000</b>.</h3>
-
-        .banner-soy-yo#dev
-            .container
-                .container-grid
-                    picture.col-4.col-sm-12
-                        img(src="./assets/wordpress.jpg", alt="Badge" class="img-fluid")
-                    .col-8.col-sm-12.banner-soy-yo__info
-                            <h3> Desarrollo especializado <span class="marked-white">  <span class="text semibold">en WordPress</span> </span> </h3>
-                            p.text-align-left.mt-1 ¿Tienes un proyecto en mente y no encuentras un theme o plugin de Wordpress que haga exactamente lo que necesitas?
-                            h4.text-align-left.mt-1 Desarrollemos juntos la solución que necesitas!
-                            <a class="btn-white mt-1" href="https://wa.me/56990055107?text=${wsp_message}" target="_blank"> <img src="./assets/green-icon-wp.png" alt="WhatsApp" class="img-fluid button-icon"/> Cotizar </a>
-
-            
-                
+            picture.col-md-4.col-sm-12 
+                img(src="./assets/home.png", alt="")

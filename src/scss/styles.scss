@@ -1,7 +1,6 @@
+@import "./gsc-bootsrap.scss";
 @import "./_themes.scss";
-@import "./layout/_grid.scss";
 @import "./_button.scss";
-@import "./layout/_box-model.scss";
 @import "./_utilites.scss";
 @import "./_fonts.scss";
 
@@ -12,6 +11,10 @@
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    padding:  15px 0;
+    @media (max-width: $breakpoint-md){
+        padding: 0 5%;
+    }
 
 }
 
@@ -19,19 +22,95 @@
     flex-basis: 20%;
     img{
         max-width: 300px;
+        @media (max-width: $breakpoint-md){
+            max-width: 250px;
+        }
     }
+}
+
+.menu-toggle{
+
+    display: none;
+    @media (max-width: $breakpoint-md){
+        display: flex;
+    }
+    flex-direction: column;
+    justify-content: center;
+    
+    width: 30px;
+    background: none;
+    position: relative;
+    z-index: 10010;
+    background-color: transparent;
+    border: none;
+    gap: 3px;
+
+    span{
+        display: block;
+        height: 4px;
+        width: 100%;
+        background-color: #000;
+        border-radius: 10px;
+        transition: all 0.2s;
+    }
+
+}
+
+.menu-toggle[data-actived="false"]{
+
+    span:nth-of-type(1){
+        transform: rotate(-45deg) translateY(10px);
+    }
+
+    span:nth-of-type(2){
+        opacity: 0;
+    }
+        
+    span:nth-of-type(3){
+        transform: rotate(45deg) translateY(-10px);
+    }
+}
+
+.menu-list{
+
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    align-items: center;
+    height: 100%;        
+    gap: 20px;
+  
+    @media (max-width: $breakpoint-md){
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        z-index: 1000;
+        transition: linear 0.2s;
+    }
+}
+
+.canvas-diabled{
+    @media (max-width: $breakpoint-md) {
+         transform: translateX(-100vw);
+    }
+   
+}
+
+.canvas-actived{
+    transform: translateX(0);
 }
 
 .nav-container{
     flex-basis: 80%;
-    ul{
-        display: flex;
-        justify-content: flex-end;
-        list-style: none;
-        align-items: center;
-        height: 100%;        
-        gap: 20px;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     a{
         text-decoration: none;
         color: #000;
@@ -52,212 +131,21 @@
     margin: 0 auto;
 }
 
-.bg-green-wave{
-
-    position: relative;
-    $heigth_size: 200px;
-
-
-    &::before{
-        content: "";
-        display: block;
-        position: absolute;
-        top: -$heigth_size;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url("../assets/wave.png");
-        background-size: contain;
-        background-repeat: no-repeat; 
-
-        @media (max-width: $breakpoint-md){
-            background-image: url("../assets/wave-mobile.png");
-            top: -100px;
-        }
-    }
-
-    &::after{
-        content: "";
-        display: block;
-        position: absolute;
-        bottom: -$heigth_size;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url("../assets/wave-bottom.png");
-        background-size: contain;
-        background-repeat: no-repeat; 
-
-        @media (max-width: $breakpoint-md){
-            display: none;
-        }
-    }
-   
-    .container{
-        position: relative;
-        z-index: 1;
-    }
-}
-
-picture .img-fluid{
-    width: 100%;
-    height: auto;
-}
-
-// Sections
-
 #home{
-    @media (max-width: $breakpoint-md){
-        height: 100vh;
-    }
-}
 
-#quien-soy{
+    .titles-wrapper{
+        display: grid;
+        place-items: center;
 
-    $postion-top: 200px;
-    @media (max-width: $breakpoint-md){
-        $postion-top: 0;
-        padding: 100px 0;
-        background-color: $green;
-        transform: translateY(-100px);
-    }
-
-    .container picture{
-        position: relative;
-        top: -$postion-top;
-        padding-bottom: 100px;
-        margin-bottom: 100px;
-
-        @media (max-width: $breakpoint-md){
-            padding-bottom: 0;
-            margin-bottom: 0;
+        h2{
+            font-size: 84px;
         }
     }
 
-    .section-container{
-        @media (max-width: $breakpoint-md){
-            picture{
-                grid-row: 2 / 3;
-            }
-            div{
-                grid-row: 1 / 2;
-            }
-        }
-    }
-}
-
-
-.class-card{
-
-    --heigth-card: 400px;
-
-    @media (max-width: $breakpoint-md){
-        --heigth-card: 225px;
-    }
-
-    position: relative;
-    width: 100%;
-    height: var(--heigth-card);
-    margin-bottom: 50px;
-
-    @media (max-width: $breakpoint-md){
-        margin-bottom: 0;
-    }
-
-    .front{
-        position: relative;
-        z-index: 10;
-        width: 100%;
-        height: 100%;
-        padding: 50px;
+    .titles{
         display: flex;
         flex-direction: column;
-        justify-content: end;
         gap: 10px;
-
-        @media (max-width: $breakpoint-md){
-            padding: 20px;
-
-            .btn {
-                padding: 5px 10px;
-                min-width: auto;
-                width: max-content;
-                p{
-                    font-size: 12px;
-                }
-                img{
-                    width: 12px;
-                    height: 12px;
-                }
-            }
-        }
-    }   
-        
-
-    .background{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 5;
-    }
-
-    .img-card{
-        width: 100%;
-        height: 100%;
-    }
-}
-
-.banner-info{
-    border-radius: 71px;
-    padding: 20px 50px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-
-    @media (max-width: $breakpoint-md){
-        flex-direction: column;
-        text-align: center;
-        padding: 50px 20px;
-    }
-
-    h3{
-        font-size: 47px;
-        font-weight: 400;
-        @media (max-width: $breakpoint-md){
-            font-size: 30px;
-            text-align: center;
-        }
-        b{
-            font-weight: bold;
-            color: #B4DEBB;
-        }
-    }
-}
-
-.banner-soy-yo{
-    background-color: #89C503;
-    padding: 50px 0;
-    &__info{
-        font-family: $quicksand;
-        h3{
-            font-size: 47px;
-            font-weight: 400;
-            text-align: left;
-            @media (max-width: $breakpoint-md){
-                font-size: 30px;
-                text-align: center;
-            }
-            b{
-                font-weight: bold;
-                color: #B4DEBB;
-                font-family: $quicksand;
-            }
-        }
-        h4{
-            font-size: 24px;
-        }
     }
 }
 
