@@ -149,6 +149,27 @@
     }
 }
 
+#sales {
+    padding: 100px 0;
+
+    .button-row{
+        margin: 0 auto;
+        width: max-content;
+    }
+}
+
+.sales-list{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+    li.active{
+        box-shadow: 0 2px 0 rgba(0,0,0,0.2);
+        padding: none;
+    }
+}
+
 /*  Footer Styles  */
 .footer-container{
     display: flex;

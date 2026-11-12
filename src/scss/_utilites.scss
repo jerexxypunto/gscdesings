@@ -141,7 +141,13 @@ $alignOptions : "start", "center", "end";
     background-position: 0 0, $position $position;
 }
 
+
+.bg-whitegren{
+ background: #F4F9E5;
+}
+
 .button-row{
     display: flex;
     gap: 15px;
+
 }

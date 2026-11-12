@@ -53,3 +53,8 @@
     @include button-base(inset 0 0 0 2px $white, transparent, $white, transparent, $white, none );
     @include button-link;
 }
+
+.btn-transparent{
+    color: #000 !important;
+    text-decoration: underline;
+}
