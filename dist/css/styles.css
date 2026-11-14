@@ -14052,6 +14052,19 @@ a.text-dark:hover, a.text-dark:focus {
   text-decoration: underline;
 }
 
+.btn-more {
+  position: relative;
+}
+.btn-more:after {
+  content: url("../assets/arrow-right.png");
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  top: 0.3em;
+  right: -1em;
+}
+
 /*  Utilities Styles  */
 .d-flex {
   display: -webkit-box;
@@ -14891,6 +14904,11 @@ h6 {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+}
+
+#about-me {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .class {
