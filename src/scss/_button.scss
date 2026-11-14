@@ -39,6 +39,11 @@
     @include button-base(inset 0 0 0 1px $green, transparent, $green, $green, $white, inset 0 0 0 1px $green);
 }
 
+
+.btn-dark-ghost{
+    @include button-base(inset 0 0 0 1px #000, transparent, #000, #000, $white, inset 0 0 0 1px #000);
+}
+
 .btn-white{
     @include button-base(none, $white, $green, $green, $white, none);
     @include button-link;

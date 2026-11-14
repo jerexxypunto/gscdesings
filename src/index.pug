@@ -1,4 +1,7 @@
 extends layout/page.pug
+include mixins/SalesCard.pug
+include mixins/ClassItem.pug
+
 block content
     .container#home 
         .row 
@@ -11,7 +14,7 @@ block content
                         button.btn.btn-ghost Servicios
 
             picture.col-md-4.col-sm-12 
-                img(src="./assets/home.png", alt="")
+                img(src="./assets/home.png", alt="" class="img-fluid")
     .container-fluid.bg-whitegren#sales 
         .container
             .row 
@@ -29,4 +32,42 @@ block content
                         li.active Perzonalización 
                         li Resultados 
                         li Soporte
-            
+
+                    .sales-card-wrapper     
+                        +SalesCard(
+                            "Diseño",
+                            "Diseño a medida para tu marca",
+                            "Cada página web se adapta a la identidad de tu negocio. Trabajamos con tus colores, tipografías y estilo para reflejar quién eres.",
+                            "Contáctanos",
+                            "Ver más",
+                            "./assets/SalesCard-1.png",
+                            "SalesCard-1.png"
+                        )
+    .container#class 
+        .row 
+            .col-12
+                h4 Clases
+                <h2 class="class-titles" > <big class="text-blue" > WordPress </big> para programadores </h2>
+                p Aprende a desarrollar sitios web personalizados con WordPress, dominando temas, plugins y código. Enfocado en programadores que buscan ampliar sus habilidades técnicas.
+
+                .button-wrapper
+                    button.btn.btn-ghost Contáctanos 
+                    button.btn.btn-transparent Ver más           
+
+            +ClassItem(
+                "./assets/Brush.png", 
+                "Diseño", 
+                "Themes"
+            )  
+
+            +ClassItem(
+                "./assets/Plugin.png", 
+                "Plugin", 
+                "Plugins"
+            )  
+
+            +ClassItem(
+                "./assets/Code.png", 
+                "Code", 
+                "Code"
+            )  

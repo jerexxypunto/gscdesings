@@ -1,0 +1,11 @@
+mixin SalesCard(category, title, description, contactLabel, moreLabel, imageSrc, imageAlt)
+    .sales-card.row
+        .titles.col-md-6.col-sm-12
+            h4= category
+            h2= title
+            p= description
+            .button-wrapper
+                button.btn-dark-ghost.btn= contactLabel
+                button.btn.btn-transparent= moreLabel
+        picture.col-md-6.col-sm-12
+            img(src=imageSrc, alt=imageAlt)
