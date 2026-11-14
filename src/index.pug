@@ -43,15 +43,15 @@ block content
                             "./assets/SalesCard-1.png",
                             "SalesCard-1.png"
                         )
-    .container#class 
+    .container.class#class-dev 
         .row 
             .col-12
-                h4 Clases
-                <h2 class="class-titles" > <big class="text-blue" > WordPress </big> para programadores </h2>
-                p Aprende a desarrollar sitios web personalizados con WordPress, dominando temas, plugins y código. Enfocado en programadores que buscan ampliar sus habilidades técnicas.
+                h4.text-center Clases
+                <h2 class="class-titles text-center" > <big class="text-blue" > WordPress </big> para programadores </h2>
+                p.text-center Aprende a desarrollar sitios web personalizados con WordPress, dominando temas, plugins y código. Enfocado en programadores que buscan ampliar sus habilidades técnicas.
 
                 .button-wrapper
-                    button.btn.btn-ghost Contáctanos 
+                    button.btn.btn-dark-ghost  Contáctanos 
                     button.btn.btn-transparent Ver más           
 
             +ClassItem(
@@ -71,3 +71,30 @@ block content
                 "Code", 
                 "Code"
             )  
+
+    .container-fluid.bg-whitegren.class#class-creator
+        .container
+            .row 
+                .col-12 
+                    h4.text-center Clases 
+                    <h2 class="class-titles text-center" > <big class="text-blue" > WordPress </big> para creadores de contenido </h2>
+                    .button-wrapper.mb-5
+                        button.btn.btn-dark-ghost Incríbete 
+                        button.btn.btn-transparent Ver más 
+                
+                .col-md-6.col-sm-12
+                    .class-info-block
+                        h3 Diseño visual atractivo
+                        p Domina el editor de bloques y las plantillas para crear páginas que capturen la atención. Aprenderás a seleccionar tipografías, colores e imágenes que refuercen tu marca.
+                        hr
+                    .class-info-block
+                        h3 Gestión de contenido sencilla
+                        p Organiza tus entradas, páginas y medios con facilidad. Te mostramos cómo programar publicaciones y mantener tu sitio actualizado sin complicaciones.
+                        hr
+                    .class-info-block
+                        h3 Sin necesidad de programar
+                        p Olvídate del código. Con WordPress y los plugins adecuados, podrás añadir funcionalidades y personalizar tu sitio arrastrando y soltando elementos.
+                        hr
+
+                .col-md-6.col-sm-12
+                    img(src="./assets/Jere WP.png", alt="class-creator" class="img-fluid")

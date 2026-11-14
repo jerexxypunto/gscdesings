@@ -170,8 +170,13 @@
     }
 }
 
-#class{
+.class{
     padding: 100px 0;
+
+    .button-wrapper{
+        width: max-content;
+        margin: 0 auto;
+    }
 }
 
 .class-titles{
@@ -180,6 +185,8 @@
         font-size: 84px;
     }
 }
+
+
 
 .class-item{
 
