@@ -6,6 +6,8 @@
     border: 1px solid $gray;
     align-items: center;
     overflow: hidden;
+    display: none;
+    
 
 
     @media screen and (min-width: $breakpoint-md){
@@ -16,11 +18,17 @@
     .titles{
         padding: 20px;
     }
+
+    &.active{
+        display: flex;
+    }
+
     picture{
         img{
             width: 100%;
             height: auto;
         }
+        padding-right: 0;
     }
 
     h4{

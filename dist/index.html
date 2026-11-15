@@ -53,12 +53,12 @@
             </div>
             <div class="col-12 mt-4"> 
               <ul class="sales-list">
-                <li class="active">Perzonalización </li>
-                <li>Resultados </li>
-                <li>Soporte</li>
+                <li class="active" data-id="1">Perzonalización </li>
+                <li data-id="2">Resultados </li>
+                <li data-id="3">Soporte</li>
               </ul>
-              <div class="sales-card-wrapper">    
-                <div class="sales-card row">
+              <div class="sales-card-wrapper">
+                <div class="sales-card row" data-id="1">
                   <div class="titles col-md-6 col-sm-12">
                     <h4>Diseño</h4>
                     <h2>Diseño a medida para tu marca</h2>
@@ -69,6 +69,30 @@
                     </div>
                   </div>
                   <picture class="col-md-6 col-sm-12"><img src="./assets/SalesCard-1.png" alt="SalesCard-1.png"/></picture>
+                </div>
+                <div class="sales-card row" data-id="2">
+                  <div class="titles col-md-6 col-sm-12">
+                    <h4>Resultados</h4>
+                    <h2>Enfoque en resultados concretos</h2>
+                    <p>Diseñamos pensando en tus objetivos, como generar más clientes o facilitar las compras. Medimos el éxito por el impacto en tu negocio.</p>
+                    <div class="button-wrapper">
+                      <button class="btn-dark-ghost btn">Contáctanos</button>
+                      <button class="btn btn-transparent">Ver más</button>
+                    </div>
+                  </div>
+                  <picture class="col-md-6 col-sm-12"><img src="./assets/SalesCard-2.png" alt="SalesCard-2.png"/></picture>
+                </div>
+                <div class="sales-card row" data-id="3">
+                  <div class="titles col-md-6 col-sm-12">
+                    <h4>Soporte</h4>
+                    <h2>Soporte continuo para tu tranquilidad</h2>
+                    <p>Ofrecemos mantenimiento y actualizaciones para que tu sitio funcione sin problemas. Estamos disponibles para resolver cualquier duda.</p>
+                    <div class="button-wrapper">
+                      <button class="btn-dark-ghost btn">Contáctanos</button>
+                      <button class="btn btn-transparent">Ver más</button>
+                    </div>
+                  </div>
+                  <picture class="col-md-6 col-sm-12"><img src="./assets/SalesCard-3.png" alt="SalesCard-3.png"/></picture>
                 </div>
               </div>
             </div>
@@ -147,6 +171,7 @@
     <footer class="footer footer-container">
       <p>© 2024 GSC Diseños. Todos los derechos reservados.</p>
     </footer>
-    <script src="./js/menu.js"> </script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/sales-card.js"> </script>
   </body>
 </html>

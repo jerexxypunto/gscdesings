@@ -14673,6 +14673,7 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
+  display: none;
 }
 @media screen and (min-width: 700px) {
   .sales-card {
@@ -14681,6 +14682,14 @@ h6 {
 }
 .sales-card .titles {
   padding: 20px;
+}
+.sales-card.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.sales-card picture {
+  padding-right: 0;
 }
 .sales-card picture img {
   width: 100%;
@@ -14780,7 +14789,7 @@ h6 {
 .menu-toggle[data-actived=true] span:nth-of-type(2) {
   opacity: 0;
 }
-.menu-toggle[data-actived=true] span:nth-of-type(3) {
+.menu-toggle[data-actived=true] –– span:nth-of-type(3) {
   -webkit-transform: rotate(45deg) translateY(-10px);
           transform: rotate(45deg) translateY(-10px);
 }
@@ -14961,6 +14970,9 @@ h6 {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 10px;
+}
+.sales-list li {
+  cursor: pointer;
 }
 .sales-list li.active {
   -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);

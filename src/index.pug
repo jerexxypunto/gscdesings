@@ -29,11 +29,12 @@ block content
 
                 .col-12.mt-4 
                     ul.sales-list
-                        li.active Perzonalización 
-                        li Resultados 
-                        li Soporte
+                        li(class="active" data-id="1") Perzonalización 
+                        li(data-id="2") Resultados 
+                        li(data-id="3") Soporte
 
-                    .sales-card-wrapper     
+                    .sales-card-wrapper
+
                         +SalesCard(
                             "Diseño",
                             "Diseño a medida para tu marca",
@@ -41,7 +42,30 @@ block content
                             "Contáctanos",
                             "Ver más",
                             "./assets/SalesCard-1.png",
-                            "SalesCard-1.png"
+                            "SalesCard-1.png",
+                            "1"
+                        )
+
+                        +SalesCard(
+                            "Resultados",
+                            "Enfoque en resultados concretos",
+                            "Diseñamos pensando en tus objetivos, como generar más clientes o facilitar las compras. Medimos el éxito por el impacto en tu negocio.",
+                            "Contáctanos",
+                            "Ver más",
+                            "./assets/SalesCard-2.png",
+                            "SalesCard-2.png",
+                            "2"
+                        )
+
+                        +SalesCard(
+                            "Soporte",
+                            "Soporte continuo para tu tranquilidad",
+                            "Ofrecemos mantenimiento y actualizaciones para que tu sitio funcione sin problemas. Estamos disponibles para resolver cualquier duda.",
+                            "Contáctanos",
+                            "Ver más",
+                            "./assets/SalesCard-3.png",
+                            "SalesCard-3.png",
+                            "3"
                         )
     .container.class#class-dev 
         .row 

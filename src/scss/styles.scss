@@ -66,7 +66,7 @@
     span:nth-of-type(2){
         opacity: 0;
     }
-        
+        ––
     span:nth-of-type(3){
         transform: rotate(45deg) translateY(-10px);
     }
@@ -216,9 +216,12 @@
     width: 100%;
     justify-content: center;
     gap: 10px;
-    li.active{
-        box-shadow: 0 2px 0 rgba(0,0,0,0.2);
-        padding: none;
+    li{
+        cursor: pointer;
+        &.active{
+            box-shadow: 0 2px 0 rgba(0,0,0,0.2);
+            padding: none;
+        }
     }
 }
 
@@ -241,3 +244,4 @@
             }
     }
 }
+

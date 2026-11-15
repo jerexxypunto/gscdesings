@@ -1,5 +1,5 @@
-mixin SalesCard(category, title, description, contactLabel, moreLabel, imageSrc, imageAlt)
-    .sales-card.row
+mixin SalesCard(category, title, description, contactLabel, moreLabel, imageSrc, imageAlt, id )
+    .sales-card.row(data-id=id)
         .titles.col-md-6.col-sm-12
             h4= category
             h2= title
