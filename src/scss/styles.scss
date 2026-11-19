@@ -134,17 +134,20 @@
 
 #home{
 
+    --height: 100vh;
+
     @media screen and (max-width: $breakpoint-md){
         padding: 100px 0;
+        --height: max-content;
     }
 
-    $height: 100vh;
+    
 
     .titles-wrapper{
 
         display: grid;
         place-items: center;
-        height: $height;
+        height: var(--height);
 
         h2{
             font-size: 30px;
@@ -157,7 +160,7 @@
 
     picture{
         img{
-            height: $height;
+            height: var(--height);
             width: 100%;
             object-fit: contain;
         }
@@ -184,6 +187,9 @@
     padding-bottom: 100px;
     .row > * {
         height: 100vh;
+        @media screen and (max-width: $breakpoint-md){
+            height: max-content;
+        }
         display: grid;
         place-items: center;
     }

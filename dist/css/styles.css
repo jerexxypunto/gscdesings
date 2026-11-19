@@ -14873,16 +14873,20 @@ h6 {
   margin: 0 auto;
 }
 
+#home {
+  --height: 100vh;
+}
 @media screen and (max-width: 700px) {
   #home {
     padding: 100px 0;
+    --height: max-content;
   }
 }
 #home .titles-wrapper {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  height: 100vh;
+  height: var(--height);
 }
 #home .titles-wrapper h2 {
   font-size: 30px;
@@ -14893,7 +14897,7 @@ h6 {
   }
 }
 #home picture img {
-  height: 100vh;
+  height: var(--height);
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
@@ -14928,6 +14932,13 @@ h6 {
   display: -ms-grid;
   display: grid;
   place-items: center;
+}
+@media screen and (max-width: 700px) {
+  #about-me .row > * {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
 }
 
 .class {
